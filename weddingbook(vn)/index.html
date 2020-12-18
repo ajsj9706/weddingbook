@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WEDDINGBOOK SAIGON</title>
+        <link rel="stylesheet" type="text/css" href="css.css" />
+    </head>
+    <body>
+        <header class="header">
+            <div class="header_logo">
+                <img
+                    class="header_logo_image"
+                    src="image/img-logo-weddingbook-saigon-white@3x.png"
+                    alt="header_logo"
+                />
+            </div>
+            <div class="header_link_div">
+                <ul>
+                    <li class="header_li"><a href="#">ABOUT US</a></li>
+                    <li class="header_li"><a href="#">SERVICE</a></li>
+                    <li class="header_li"><a href="#">BRAND</a></li>
+                    <li class="header_li"><a href="#">VIP</a></li>
+                    <li class="header_li"><a href="#">WEDDING FAIR</a></li>
+                    <li class="header_li"><a href="#">PRE-BOOK</a></li>
+                </ul>
+            </div>
+        </header>
+        <div id="modal" class="modal">
+            <div class="modal_content">
+                <p class="modal_text"> 
+                    ĐĂNG KÝ THAM GIA
+                    <br>
+                    WEDDINGBOOK SAIGON
+                    <br>
+                    WEDDING FAIR
+                </p>
+                <div class="fair_input_div modal_fair_div">
+                    <p id="modal_name_label" class="input_label">Tên</p>
+                    <input
+                        id="modal_input_name" 
+                        class="fair_input modal_fair_input" 
+                        type="text" 
+                        placeholder="Tên" 
+                        onkeypress="modalColorBtn()" 
+                    />
+                    <p id="modal_number_label" class="input_label">Số điện thoại di động</p>
+                    <select class="number modal_fair_number">
+                        <option value="">+84</option>
+                    </select>
+                    <input 
+                        id="modal_input_number"
+                        class="fair_input fair_input_number modal_fair_input" 
+                        type="text"
+                        placeholder="Số điện thoại di động" 
+                        onkeypress="modalColorBtn()"
+                    />
+                    <input class="checkbox" type="checkbox" checked="checked" />
+                    <p class="fair_input_text">Tôi đồng ý cung cấp thông tin cá nhân</p>
+                    <ul class="fair_input_ul">
+                        <li class="fair_input_sub_text">Mục đích : Đặt giữ chỗ để tham quan Weddingbook Saigon</li>
+                        <li class="fair_input_sub_text">Thông tin : Tên, số điện thoại di động</li>
+                        <li class="fair_input_sub_text">
+                            Thời gian lưu trữ : Thông tin này sẽ mất hiệu lực sau khi đã liên hệ
+                            <br>
+                            với người đặt giữ chỗ
+                        </li>
+                    </ul>
+                    <input id="modal_fair_btn" class="check_btn" type="button" value="ĐĂNG KÝ" onclick="modalCheck()" />
+                    <p class="modal_cancel" onclick="modalCancel()">CANCEL</p>
+                </div>
+            </div>
+        </div>
+        <section class="section">
+            <img
+                class="title_image"
+                src="image/img-title@2x.jpg"
+                alt="title_image"
+            />
+            <!-- about -->
+            <div class="about_div">
+                <div class="background_div about_background_color"></div>
+                <img
+                    class="about_image"
+                    src="image/about-us@3x.png"
+                    alt="about_image"
+                />
+                <div class="media_div">
+                    <div class="media_float">
+                        <div class="text">
+                            Weddingbook là công ty hàng đầu đại diện cho văn hóa cưới của Hàn Quốc
+                        </div>
+                        <div class="sub_div">
+                            <p class="sub_text">
+                                Từ thành công đó, chúng tôi muốn giới thiệu đến bạn Weddingbook Saigon, trung tâm thương 
+                                mại cưới đầu tiên ở Việt Nam, nơi có thể giúp các cặp đôi cô dâu, chú rể tại Hồ Chí Minh chuẩn bị 
+                                một đám cưới như trong mơ.
+                            </p>
+                            <br>
+                            <p class="sub_text sub_space">
+                                Hãy đến với Weddingbook Saigon, nơi mà chúng tôi luôn sẵn sàng mang đến cho bạn mọi thứ cho 
+                                ngày trọng đại của mình theo cách nhanh chóng, tiện lợi với chất lượng đáng thỏa lòng nhất.
+                            </p>
+                            <a class="about_sub_link" href="https://www.weddingbook.com/public/weddingbookChungdam/dist/index.html">
+                                Tìm hiểu thêm về WEDDINGBOOK Seoul
+                            </a>
+                            <br>
+                            <a class="about_sub_link" href="https://www.weddingbook.vn/about">
+                                Tìm hiểu thêm về WEDDINGBOOK Saigon
+                            </a>
+                        </div>
+                    </div>
+                    <!-- 이미지 슬라이드 -->
+                    <div class="photo_div">
+                        <img 
+                            id="about_photo_up" 
+                            class="photo_btn" 
+                            src="image/btn-up@2x.png" 
+                            alt="button" 
+                            onclick="aboutEventUpBtn()"
+                        />
+                        <img 
+                            id="about_photo_down" 
+                            class="photo_btn btn_space" 
+                            src="image/btn-down@2x.png" 
+                            alt="button" 
+                            onclick="aboutEventDownBtn()"
+                        />
+                        <div class="photo_event_div">
+                            <ul>
+                                <li><img class="event_photo" src="image/img-aboutus-1@2x.webp" alt="event_image" /></li>
+                                <li><img class="event_photo" src="image/img-aboutus-2@2x.webp" alt="event_image" /></li>
+                                <li><img class="event_photo" src="image/img-aboutus-3@2x.webp" alt="event_image" /></li>
+                                <li><img class="event_photo" src="image/img-aboutus-4@2x.webp" alt="event_image" /></li>
+                                <li><img class="event_photo" src="image/img-aboutus-5@2x.webp" alt="event_image" /></li>
+                            </ul>
+                        </div>
+                        <div class="photo_event_content">
+                            <ul>
+                                <li class="event_text">WEDDINGBOOK SEOUL, KOREA</li>
+                                <li class="event_text">WEDDINGBOOK SEOUL WEDDING FAIR 2019</li>
+                                <li class="event_text">WEDDINGBOOK SEOUL DRESS AND BOOKS SPACE</li>
+                                <li class="event_text">WEDDINGBOOK SEOUL DRESS MANAGEMENT</li>
+                                <li class="event_text">WEDDINGBOOK SAIGON, VIETNAM (OPEN IN DECEMBER 2020)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 이미지 슬라이드 -->
+                </div>
+            </div>
+            <!-- about -->
+
+            <!-- special  -->
+            <div class="special_div">
+                <img class="special_logo_image" src="image/special-event@3x.png" alt="special_logo_image" />
+                <div class="special_frame">
+                    <div class="special_content">
+                        <ul>
+                            <li>
+                                <div class="special_content_div">
+                                    <p class="special_content_text" >
+                                        Lớp học tìm hiểu về những
+                                        <br>
+                                        mẫu váy cưới hot nhất năm
+                                        <br>
+                                        2020
+                                    </p>
+                                    <p class="special_content_sub_text">
+                                        Chúng tôi sẽ giới thiệu đến bạn những mẫu váy cưới hot
+                                        <br>
+                                        nhất năm 2020 cùng những thiết kế mới nhất đến từ các
+                                        <br>
+                                        thương hiệu nổi tiếng của Hàn Quốc.
+                                    </p>
+                                    <p class="special_content_link" onclick="singUpModal()">'Đăng ký tham gia</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="special_content_div">
+                                    <p class="special_content_text" >
+                                        Trải nghiệm chụp ảnh K-
+                                        <br>
+                                        wedding Studio cùng nhiếp
+                                        <br>
+                                        ảnh gia
+                                    </p>
+                                    <p class="special_content_sub_text">
+                                        Chúng tôi sẽ gửi đến bạn những bức ảnh chụp đôi của hai
+                                        <br>
+                                        bạn được chụp bởi nhiếp ảnh gia chuyên chụp ảnh đám
+                                        <br>
+                                        cưới hàng đầu tại Hàn Quốc.
+                                    </p>
+                                    <p class="special_content_link" onclick="singUpModal()">'Đăng ký tham gia</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="special_content_div">
+                                    <p class="special_content_text" >
+                                        Trải nghiệm dịch vụ trang 
+                                        <br>
+                                        điểm và làm tóc theo phong
+                                        <br>
+                                        cách K-wedding
+                                    </p>
+                                    <p class="special_content_sub_text">
+                                        Chúng tôi sẽ giúp bạn tìm ra phong cách phù hợp nhất với
+                                        <br>
+                                        bạn cùng với chuyên gia trang điểm và nhà tạo mẫu tóc
+                                        <br>
+                                        hàng đầu.
+                                    </p>
+                                    <p class="special_content_link" onclick="singUpModal()">'Đăng ký tham gia</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="special_content_image_div">
+                        <ul>
+                            <li>
+                                <img 
+                                    class="special_content_image big_image" 
+                                    src="image/img-event-1-1@2x.webp" 
+                                    alt="special_image"
+                                />
+                                <img 
+                                    class="special_content_image small_image special_image_block" 
+                                    src="image/img-event-1-2@2x.webp" 
+                                    alt="special_image"
+                                />
+                            </li>
+                            <li>
+                                <img 
+                                    class="special_content_image small_image special_image_none" 
+                                    src="image/img-event-1-2@2x.webp" 
+                                    alt="special_image"
+                                />
+                            </li>
+                            <li>
+                                <img 
+                                    class="special_content_image big_image c_small " 
+                                    src="image/img-event-1-3@2x.webp"
+                                    alt="special_image"
+                                />
+                                <img 
+                                    class="special_content_image small_image c_big special_image_block" 
+                                    src="image/img-event-1-4@2x.webp"
+                                    alt="special_image"
+                                />
+                            </li>
+                            <li>
+                                <img 
+                                    class="special_content_image small_image c_big special_image_none" 
+                                    src="image/img-event-1-4@2x.webp"
+                                    alt="special_image"
+                                />
+                            </li>
+                            <li>
+                                <img 
+                                    class="special_content_image big_image c_small" 
+                                    src="image/img-event-2-1@2x.webp"
+                                    alt="special_image"
+                                />
+                                <img 
+                                    class="special_content_image small_image c_big special_image_block" 
+                                    src="image/img-event-2-2@2x.webp"
+                                    alt="special_image"
+                                />
+                            </li>
+                            <li>
+                                <img 
+                                    class="special_content_image small_image c_big special_image_none" 
+                                    src="image/img-event-2-2@2x.webp"
+                                    alt="special_image"
+                                />
+                            </li>
+                            <li>
+                                <img 
+                                    class="special_content_image big_image" 
+                                    src="image/img-event-2-3@2x.webp"
+                                    alt="special_image"
+                                />
+                                <img 
+                                    class="special_content_image small_image special_image_block" 
+                                    src="image/img-event-2-4@2x.webp"
+                                    alt="special_image"
+                                />
+                            </li>
+                            <li>
+                                <img 
+                                    class="special_content_image small_image special_image_none" 
+                                    src="image/img-event-2-4@2x.webp"
+                                    alt="special_image"
+                                />
+                            </li>
+                            <li>
+                                <img 
+                                    class="special_content_image big_image" 
+                                    src="image/img-event-3-1@2x.webp"
+                                    alt="special_image"
+                                />
+                                <img 
+                                class="special_content_image small_image special_image_block"                                 
+                                src="image/img-event-3-2@2x.webp"
+                                alt="special_image"
+                            />
+                            </li>
+                            <li>
+                                <img 
+                                    class="special_content_image small_image special_image_none"                                 
+                                    src="image/img-event-3-2@2x.webp"
+                                    alt="special_image"
+                                />
+                            </li>
+                            <li>
+                                <img 
+                                    class="special_content_image big_image c_small" 
+                                    src="image/img-event-3-3@2x.webp"
+                                    alt="special_image"
+                                />
+                                <img 
+                                    class="special_content_image small_image c_big special_image_block" 
+                                    src="image/img-event-3-4@2x.webp"
+                                    alt="special_image"
+                                />
+                            </li>
+                            <li>
+                                <img 
+                                    class="special_content_image small_image c_big special_image_none" 
+                                    src="image/img-event-3-4@2x.webp"
+                                    alt="special_image"
+                                />
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- special  -->
+
+            <!-- gift -->
+            <div class="gift_div">
+                <img class="gift_logo_image" src="image/welcome-gift@3x.png" alt="gift_logo_image" />
+                <div class="product_background">
+                    <div class="product_background_div">
+                        <p class="product_text">GIFT 01</p>
+                        <img class="product_image" src="image/img-gift-1@2x.webp" alt="gift_image" />
+                        <p class="product_image_text">
+                            Starbucks Reusable Couple Cups
+                            <br>
+                            (2ea)
+                        </p>
+                        <p class="product_image_sub_text">
+                            100% quan khách đến tham gia sẽ nhận được quà tặng
+                            <br>
+                            từ chúng tôi.
+                        </p>
+                        <p class="product_text_btn" onclick="singUpModal()">
+                            Nhận quà
+                        </p>
+                    </div>
+                    <div class="product_background_div">
+                        <p class="product_text">GIFT 02</p>
+                        <img class="product_image" src="image/img-gift-2@2x.webp" alt="gift_image" />
+                        <p class="product_image_text">
+                            Avenue Juno Hair & Make-up
+                            <br> 
+                            Coupon
+                        </p>
+                        <p class="product_image_sub_text">
+                            100% quan khách đến tham gia sẽ nhận được quà tặng
+                            <br>
+                            từ chúng tôi.
+                        </p>
+                        <p class="product_text_btn" onclick="singUpModal()">
+                            Nhận quà
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- gift -->
+
+            <!-- consulting -->
+            <div class="consulting_div">
+                <div class="background_div consulting_background_color"></div>
+                <img class="consulting_logo_image" src="image/consulting-program@3x.png" alt="consulting_logo_image" />
+
+                <div class="media_div">
+                    <div class="media_float">
+                        <p class="consulting_text text">
+                            Tư vấn phong cách cưới 1:1
+                            <br>
+                            cùng với chuyên gia
+                        </p>
+                        <div class="sub_div">
+                            <p class="sub_text">
+                                Bạn sẽ nhận được tư vấn về studio chụp ảnh / váy cưới / trang điểm và làm tóc cùng với những
+                                chuyên gia được đào tạo chuyên sâu trong lĩnh vụ cưới hỏi.
+                                Hãy chuẩn bị đám cưới trong mơ của bạn tại Weddingbook Saigon.
+                            </p>
+                            <p class="consulting_link" onclick="singUpModal()">
+                                Đăng ký tham gia
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- 이미지 슬라이드 -->
+                    <div class="photo_div consulting_div_space">
+                        <img 
+                            id="consulting_photo_up" 
+                            class="photo_btn" 
+                            src="image/btn-up@2x.png" 
+                            alt="button" 
+                            onclick="consultingEventUpBtn()"
+                        />
+                        <img 
+                            id="consulting_photo_down" 
+                            class="photo_btn btn_space" 
+                            src="image/btn-down@2x.png" 
+                            alt="button"
+                            onclick="consultingEventDownBtn()"
+                        />
+                        <div class="photo_event_div consulting_event_div">
+                            <ul>
+                                <li><img class="event_photo" src="image/img-consultingprogram-1@2x.webp" alt="event_image" /></li>
+                                <li><img class="event_photo" src="image/img-consultingprogram-2@2x.webp" alt="event_image" /></li>
+                                <li><img class="event_photo" src="image/img-consultingprogram-3@2x.webp" alt="event_image" /></li>
+                                <li><img class="event_photo" src="image/img-consultingprogram-4@2x.webp" alt="event_image" /></li>
+                                <li><img class="event_photo" src="image/img-consultingprogram-5@2x.webp" alt="event_image" /></li>
+                            </ul>
+                        </div>
+                        <div class="photo_event_content consulting_event_content">
+                            <ul>
+                                <li class="event_text">WEDDING CONSULTING PROGRAM BY WEDDING STYLIST</li>
+                                <li class="event_text">600 CHIẾC VÁY CƯỚI ĐẾN TỪ CÁC THƯƠNG HIỆU CAO CẤP CỦA HÀN QUỐC</li>
+                                <li class="event_text">100 PHONG CÁCH CHỤP HÌNH PHIM TRƯỜNG CÓ TẠI NỘI THÀNH HỒ CHÍ MINH</li>
+                                <li class="event_text">TẠO KIỂU TÓC ĐÁM CƯỚI THẬT ĐẸP TẠI CỬA HÀNG LÀM TÓC HÀNG ĐẦU HÀN QUỐC</li>
+                                <li class="event_text">LÀM NÊN ĐIỀU ĐẶC BIỆT NHẤT TRONG NGÀY ĐẶC BIỆT TỪ CHIẾC GIÀY CƯỚI CHO ĐẾN
+                                    <br>
+                                    BỘ VEST CỦA CHÚ RỂ CŨNG ĐƯỢC LÀM RIÊNG
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 이미지 슬라이드 -->
+                </div>
+            </div>
+            <!-- consulting -->
+
+            <!-- benefit -->
+            <div class="benefit_div">
+                <img class="benefit_logo_image" src="image/special-benefit@3x.png" alt="benefit_logo_image" />
+                <div class="product_background">
+                    <div class="product_background_div">
+                        <p class="product_text">GIFT 01</p>
+                        <img class="product_image" src="image/img-benefit-1@2x.webp" alt="gift_image" />
+                        <p class="product_image_text">
+                            Wedding Package Coupon
+                        </p>
+                        <p class="product_image_sub_text">
+                            Tặng ngay phiếu giảm giá 20% cho khách đặt gói sản
+                            <br>
+                            phẩm của Weddingbook Saigon khi ký hợp đồng tại
+                            <br>
+                            Wedding Fair.
+                        </p>
+                        <p class="product_text_btn" onclick="singUpModal()">
+                            Nhận quà
+                        </p>
+                    </div>
+                    <div class="product_background_div">
+                        <p class="product_text">GIFT 02</p>
+                        <img class="product_image" src="image/img-benefit-2@2x.webp" alt="gift_image" />
+                        <p class="product_image_text benefit_text_space">
+                            Iro Style Wedding Shoes
+                        </p>
+                        <p class="product_image_sub_text">
+                            Tặng ngay giày cưới cho 100 khách hàng ký hợp đồng
+                            <br>
+                            đầu tiên. (trị giá 4,000,000vnđ)
+                        </p>
+                        <p class="product_text_btn" onclick="singUpModal()">
+                            Nhận quà
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- benefit -->
+            
+            <!-- fair -->
+            <div class="fair_div">
+                <div class="fair_content">
+                    <div class="fair_text_div">
+                        <p class="fair_text">
+                            Đăng ký tham gia
+                            <br>
+                            WEDDINGBOOK
+                            <br>
+                            SAIGON Wedding fair
+                        </p>
+                        <p class="sub_text fair_sub_text">
+                            Khi bạn đăng ký xong chúng tôi sẽ gọi điện
+                            <br>
+                            để hướng dẫn bạn
+                        </p>
+                    </div>
+                    <div class="fair_input_div">
+                        <p id="input_name_label" class="input_label">Tên</p>
+                        <input
+                            id="fair_input_name" 
+                            class="fair_input" 
+                            type="text" 
+                            placeholder="Tên" 
+                            onkeypress="fairBtnColor()" 
+                        />
+                        <p id="input_number_label" class="input_label">Số điện thoại di động</p>
+                        <div class="input_number_div">
+                            <select class="number">
+                                <option class="number" value="">+84</option>
+                            </select>
+                            <input 
+                                id="fair_input_number"
+                                class="fair_input fair_input_number" 
+                                type="text"
+                                placeholder="Số điện thoại di động" 
+                                onkeypress="fairBtnColor()"
+                            />
+                        </div>
+                        <input class="checkbox" type="checkbox" checked="checked" />
+                        <p class="fair_input_text">Tôi đồng ý cung cấp thông tin cá nhân</p>
+                        <ul class="fair_input_ul">
+                            <li class="fair_input_sub_text">Mục đích : Đặt giữ chỗ để tham quan Weddingbook Saigon</li>
+                            <li class="fair_input_sub_text">Thông tin : Tên, số điện thoại di động</li>
+                            <li class="fair_input_sub_text">
+                                Thời gian lưu trữ : Thông tin này sẽ mất hiệu lực sau khi đã liên hệ
+                                <br>
+                                với người đặt giữ chỗ
+                            </li>
+                        </ul>
+                        <input id="fair_btn" class="check_btn" type="button" value="ĐĂNG KÝ" onclick="fairCheck()" />
+                    </div>
+                </div>
+            </div>
+            <!-- fair -->
+
+            <!-- Safety -->
+            <div class="safety_div">
+                <div class="safety_frame">
+                    <div class="safety_cotent">
+                        <div class="safety_text_div">
+                            <p class="safety_text">Safety Guidelines</p>
+                            <p class="safety_sub_text">
+                                Phòng ngừa Covid-19 để có một Wedding
+                                <br>
+                                Fair an toàn
+                            </p>
+                        </div>
+                        <div class="safety_photo">
+                            <ul class="safety_photo_ul">
+                                <li class="safety_photo_li">
+                                    <div class="safety_image_div">
+                                        <img class="safety_image" src="image/img-safety-1@2x.webp" />
+                                    </div>
+                                    <p class="safety_photo_text">Đăng ký trước 100%</p>
+                                    <p class="safety_photo_sub_text">
+                                        Giới hạn số người tham gia
+                                        <br>
+                                        để có bầu không khí thoải 
+                                        <br>
+                                        mái nhất
+                                    </p>
+                                </li>
+                                <li class="safety_photo_li">
+                                    <div class="safety_image_div">
+                                        <img class="safety_image" src="image/img-safety-2@2x.webp" />
+                                    </div>
+                                    <p class="safety_photo_text">
+                                            Hạn chế việc tiếp 
+                                            <br>
+                                            xúc
+                                    </p>
+                                    <p class="safety_photo_sub_text">
+                                        Không gian rộng giữa các 
+                                        <br>
+                                        quan khách
+                                    </p>
+                                </li>
+                                <li class="safety_photo_li">
+                                    <div class="safety_image_div">
+                                        <img class="safety_image" src="image/img-safety-3@2x.webp" />
+                                    </div>
+                                    <p class="safety_photo_text">
+                                        Biện pháp phòng 
+                                        <br>
+                                        ngừa dành cho 
+                                        <br>
+                                        nhân viên
+                                    </p>
+                                    <p class="safety_photo_sub_text">
+                                        Tất cả nhân viên được đo 
+                                        <br>
+                                        nhiệt độ và đeo khẩu trang
+                                    </p>
+                                </li>
+                                <li class="safety_photo_li">
+                                    <div class="safety_image_div">
+                                        <img class="safety_image" src="image/img-safety-4@2x.webp" />
+                                    </div>
+                                    <p class="safety_photo_text">
+                                        Biện pháp phòng 
+                                        <br>
+                                        ngừa dành cho 
+                                        <br>
+                                        quan khách
+                                    </p>
+                                    <p class="safety_photo_sub_text">
+                                        Khách đến tham quan sẽ 
+                                        <br>
+                                        được đo nhiệt độ và diệt
+                                        <br>
+                                        khuẩn bằng nước rửa tay
+                                    </p>
+                                </li>
+                                <li class="safety_photo_li">
+                                    <div class="safety_image_div">
+                                        <img class="safety_image" src="image/img-safety-5@2x.webp" />
+                                    </div>
+                                    <p class="safety_photo_text">
+                                        Diệt khuẩn toàn bộ 
+                                        <br>
+                                        không gian
+                                    </p>
+                                    <p class="safety_photo_sub_text">
+                                        Toàn bộ không gian diễn ra 
+                                        <br>
+                                        sự kiện sẽ được diệt khuẩn 
+                                        <br>
+                                        hàng ngày
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Safety -->
+
+            <!-- information -->
+            <div class="information_div">
+                <div class="information_frame">
+                    <p class="information_label">Information</p>
+                    <div class="information_media_div">
+                        <div class="information_content">
+                            <p class="information_content_label">OPEN</p>
+                            <span class="informaiton_cotent_span">
+                                1st
+                            </span>
+                            <p class="information_content_time">
+                                9:00 - 21:00, Ngày 28 đến ngày 29
+                                <br>
+                                tháng 11 năm 2020
+                            </p>
+                        </div>
+                        <div class="inforamation_map"></div>
+                        <div class="map_text_div">
+                            <p class="map_text_bold">White Palace194</p>
+                            <p class="map_text">Hoàng Văn Thụ, Phường 9, Phú Nhuận, Thành phố Hồ Chí Minh</p>
+                        </div>
+                        <div class="information_content">
+                            <p class="information_content_label" style="visibility: hidden;">0000</p>
+                            <span class="informaiton_cotent_span">
+                                2nd
+                            </span>
+                            <p class="information_content_time">
+                                9:00 - 21:00, Hàng ngày từ ngày 30
+                                <br>
+                                tháng 11 năm 2020
+                            </p>
+                        </div>
+                        <div class="inforamation_map"></div>
+                        <div class="map_text_div">
+                            <p class="map_text_bold">WEDDINGBOOK Office</p>
+                            <p class="map_text">585/16 su van hanh, phuong 13, quan 10, TP.Ho Chi Minh</p>
+                        </div>
+                        <div class="information_content">
+                            <p class="information_content_label">CONTACT</p>
+                            <div class="information_contact">
+                            <p class="information_contact_text">info@weddingbook.vn</p>
+                            <a class="information_contact_a" href="#">facebook messenger</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- information -->
+        </section>
+        <footer class="footer">
+            <img class="footer_logo_image" src="image/img-logo-wb-weddingbook-saigon-gray.png" alt="footer_logo"/>
+            <div class="footer_div">
+                <div class="footer_sub_div">
+                    <p class="footer_text">ADDRESS</p>
+                    <ul class="footer_sub_text_top">
+                        <li class="footer_sub_text">583 Sư Vạn Hạnh,</li>
+                        <li class="footer_sub_text">Phường 12,</li>
+                        <li class="footer_sub_text">Quận 10,</li>
+                        <li class="footer_sub_text">Hồ Chí Minh,</li>
+                        <li class="footer_sub_text">Vietnam</li>
+                    </ul>
+                </div>
+                <div class="footer_sub_div">
+                    <p class="footer_text">CUSTOMER SERVICE</p>
+                    <ul class="footer_sub_text_top">
+                        <li class="footer_sub_text">+84 024 234 83 975</li>
+                        <li class="footer_sub_text bold_text">Chat with us on Messenger</li>
+                    </ul>
+                </div>
+                <div class="footer_sub_div">
+                    <p class="footer_text">OPEN</p>
+                    <ul class="footer_sub_text_top">
+                        <li class="footer_sub_text">Tue-Sun 10am-9pm</li>
+                    </ul>
+                </div>
+                <div class="footer_sub_div">
+                    <p class="footer_text">FOLLOW US</p>
+                    <ul class="footer_sub_text_top">
+                        <li class="footer_sub_text bold_text">Facebook</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </body>
+    <script src="index.js"></script>
+</html>
